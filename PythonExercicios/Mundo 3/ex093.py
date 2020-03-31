@@ -5,14 +5,12 @@
 # feitos durante o campeonato.
 jogador = dict()
 partidas = list()
-tot = 0
 jogador['nome'] = str(input('Nome do jogador: ')).strip().capitalize()
 jogador['partidas'] = int(input(f'Nº de partidas de {jogador["nome"]}: '))
 for c in range(0, jogador['partidas']):
     gols = int(input(f'Gols feitos na patida {c}: '))
     partidas.append(gols)
-    tot += gols
-jogador['gols'] = partidas[:]; jogador['total'] = tot
+jogador['gols'] = partidas[:]; jogador['total'] = sum(partidas)
 print('-='*62)
 print(jogador)
 print('-='*62)
