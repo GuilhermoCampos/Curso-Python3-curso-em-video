@@ -1,0 +1,6 @@
+re = float(input('Quantos Reais tem na sua Carteira?: R$'))
+do = re / float(4.06)
+eu = re / float(4.46)
+yen = re / float(0.038)
+doca = re / float(3.05)
+print('Com R${} você pode comprar US${:.2f}, ou ¥{:.2f}, ou €{:.2f}, ou C${:.2f}.'.format(re, do, yen, eu, doca))
