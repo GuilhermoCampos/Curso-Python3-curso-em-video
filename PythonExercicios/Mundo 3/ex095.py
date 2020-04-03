@@ -26,12 +26,14 @@ print('-='*62)
 print(f'{"COD"}', f'{"Nome":<15}', f'{"Gols":<15}', f'Total')
 print('-'*42)
 for k, v in enumerate(jogadores):
-        print(f' {k}  {v["nome"]:<14}  {v["gols"]} {v["total"]:>7}')
+        print(f' {k}  {v["nome"]:<14}  {str(v["gols"]):<15} {v["total"]:^5}')
 print('-'*42)
 while True:
     dados = int(input('Mostrar dados de qual jogador? (999 para parar): '))
     if dados == 999:
         break
+    elif dados >= len(jogadores):
+        print(f'!Erro não existe jogador de número {dados}')
     else:
         print(f'Levantamento do jogador {jogadores[dados]["nome"]}:')
         for p, g in enumerate(jogadores[dados]['gols']):
