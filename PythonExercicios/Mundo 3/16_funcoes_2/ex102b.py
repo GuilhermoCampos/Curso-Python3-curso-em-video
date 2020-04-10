@@ -1,10 +1,10 @@
 def fatorial(n, show=False):
-    '''
+    """
     Calcula o Fatorial de um número.
     :param n: Número a ser calculado.
     :param show: (opcional) Mostrar a conta.
     :return: Valor fatorial de um número n.
-    '''
+    """
     from time import sleep
     f = 1
     print(f'!{n} = ', end='', flush=True)
