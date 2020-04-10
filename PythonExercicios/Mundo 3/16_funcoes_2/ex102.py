@@ -12,9 +12,9 @@ def fatorial(numero, show=False):
     while c > 0:
         if show:
             sleep(0.5)
-            print(c, end='')
+            print(c, end='', flush=True)
             sleep(0.5)
-            print(' x ' if c > 1 else ' = ', end='')
+            print(' x ' if c > 1 else ' = ', end='', flush=True)
         f *= c
         c -= 1
     return f
