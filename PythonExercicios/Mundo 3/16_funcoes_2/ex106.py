@@ -22,9 +22,9 @@ def printcor(titulo):
     elif titulo == 3:
         texto = 'ATÉ LOGO'
         tam = len(texto)
-        print('\033[30:41~m\033[m' * (tam + 4))
-        print(f'\033[30:44m  {texto}  \033[m')
-        print('\033[30:41~m\033[m' * (tam + 4))
+        print('\033[30:41m~\033[m' * (tam + 4))
+        print(f'\033[30:41m  {texto}  \033[m')
+        print('\033[30:41m~\033[m' * (tam + 4))
     sleep(1)
 
 
@@ -39,7 +39,7 @@ def comahelp(command):
 
 while True:
     printcor(1)
-    comando = str(input('Função ou Biblioteca: ')).strip().lower()
+    comando = str(input('Função ou Biblioteca >')).strip().lower()
     if comando == 'fim':
         printcor(3)
         break

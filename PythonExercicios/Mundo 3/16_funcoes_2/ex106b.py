@@ -38,7 +38,7 @@ def comahelp(command):
 
 while True:
     printcor(1)
-    comando = str(input('Função ou Biblioteca: ')).strip().lower()
+    comando = str(input('Função ou Biblioteca >')).strip().lower()
     if comando == 'fim':
         printcor(3)
         break
