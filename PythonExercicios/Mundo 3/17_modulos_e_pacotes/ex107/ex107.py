@@ -3,6 +3,7 @@
 # Faça também um programa que importe esses módulo e
 # use algumas dessas funções
 import moeda
+# from ex107 import moeda
 
 num = float(input('Digite um valor: '))
 
