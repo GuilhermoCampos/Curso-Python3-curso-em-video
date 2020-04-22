@@ -6,19 +6,40 @@
 #
 # Crie um pequeno sistema modularizado que permita cadastrar
 # pessoas pelo seu nome e idade em um arquivo de texto simples.
-from bib.interface import *
-from bib.cadastro import *
-from bib.listagem import *
-from time import sleep
-lista = list()
+
+from bib import *
+
+# Função iniciando o arquivo para verificar se ele existe, caso não exista cria um arquivo txt.
+
+abrir('nomes.txt')
+
+# Loop infinito que permite a repetição do menu até o usuário descidir sair
+
 while True:
+
+    # Iniciando função que irá mostrar as opções do menú e irá receber a resposta de qual função iniciar
+
     opcao = menu(['Ver Pessoas Cadastradas', 'Cadastrar Nova Pessoa', 'Sair do Sistema'])
+
+    # A 1º opção do programa irá ler os dados de um arquivo e mostrar eles na tela
+
     if opcao == 1:
-        listar(lista)
-        continue
+        try:
+            arquivo = ler('nomes.txt')
+            listar(interpretar(arquivo))
+        except:
+            print('Não foi Possivel ler a lista')
+        else:
+            continue
+
+    # A 2º opção do programa irá cadastrar mais uma pessoa na lista
+
     elif opcao == 2:
-        cadastrar(lista)
+        cadastrar('nomes.txt')
         continue
+
+    # A 3º opção do programa irá fechar o programa
+
     elif opcao == 3:
         linha(60)
         print(f'{"Saindo do sistema... Até logo":^60}')

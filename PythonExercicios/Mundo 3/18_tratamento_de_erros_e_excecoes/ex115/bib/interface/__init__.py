@@ -1,4 +1,9 @@
 def leiaInt(msg):
+    """
+    Função que aceita apenas a entrada de números inteiros, retornando erro a todos que não sejam numeros inteiros.
+    :param msg: Mensagem que será mostrada no momento da inserção de dados
+    :return:Número inteiro
+    """
     while True:
         try:
             num = int(input(f'{msg}'))
@@ -13,15 +18,28 @@ def leiaInt(msg):
 
 
 def linha(tam):
+    """
+    Função que faz uma linha de acordo com o tamanho inserido
+    :param tam: tamanho em caracteres da linha
+    """
     lin = '-' * tam
     print(lin)
 
 
 def cabecalho(txt):
+    """
+    Cabeçalho contendo o titulo do programa
+    :param txt: texto titulo
+    """
     print(f'{txt:^60}')
 
 
 def menu(lista):
+    """
+    Função que mostra um menu e solicida a insersão de um número inteiro representando um item da lista.
+    :param lista: lista com as opções que serão mostradas no menu
+    :return: opção selecionada
+    """
     linha(60)
     cabecalho('Menu Principal')
     linha(60)
