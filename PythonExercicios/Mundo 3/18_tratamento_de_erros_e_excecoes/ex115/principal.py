@@ -7,6 +7,7 @@
 # Crie um pequeno sistema modularizado que permita cadastrar
 # pessoas pelo seu nome e idade em um arquivo de texto simples.
 
+from time import sleep
 from bib import *
 
 # Função iniciando o arquivo para verificar se ele existe, caso não exista cria um arquivo txt.
